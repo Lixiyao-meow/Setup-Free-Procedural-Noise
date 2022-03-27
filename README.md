@@ -1,3 +1,6 @@
+### Overview
+We implement a procedural surface noise without using texture coordinates. The noise is based on sparse convolution and the Gabor kernel with isotropic filter.
+
 The project is developped based on the code MyRenderer from the course INF584, so the Building and Running use the same command. A new class PoissonDisk is added for the surface noise generation.
 
 The program is developped and tested with the sphere_high_res.off model. It only work for the unit 3D model for now. As each time we need to change control parameters to adapt the surface noise, the parameters in the code works best with the unit shpere.
