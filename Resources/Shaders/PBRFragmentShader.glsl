@@ -167,14 +167,14 @@ void main () {
     float omega_0 = - PI / 4.0;
 
     // 2.1. Anisotropic Gabor Kernel Parameters in the paper
-    mat2 J = mat2 (4.0, 3.0,
-                   3.0, 3.0);
-    float sigma = 0.9f;
+    mat2 J = mat2 (4.0, 4.0,
+                   4.0, 5.0);
+    float sigma = 1.0f;
     mat2 Sigma_F_inv = sigma_F_inv(sigma, J);
     mat2 Sigma_G_inv = sigma_G_inv(a);
     mat2 Sigma_FG = sigma_FG(Sigma_F_inv, Sigma_G_inv);
     float a_ = a_(Sigma_FG);
-    vec2 Mu_G = mu_G(0.01f, omega_0);
+    vec2 Mu_G = mu_G(a, omega_0);
     float K_ = K_(K, a, a_, Mu_G, Sigma_F_inv, Sigma_G_inv);
 
     // 2.2. Gabor Kernel with an Anisotrpic Gaussian Envelop Parameters
@@ -195,8 +195,8 @@ void main () {
 
         if( weight != 0){
             //noise += weight * smooth_cosine_kernel(x, y); // 1.1. smooth cosine kernel
-            //noise += weight * gabor(K, a, F_0, omega_0, x, y); // 1.2. Gabor kernel
-            noise += 5 * weight * gabor(K_, a_, F_0, omega_0, x, y); // 2.1. Gabor kernel with anisotropic filtering mentionned in paper
+            noise += weight * gabor(K, a, F_0, omega_0, x, y); // 1.2. Gabor kernel
+            //noise += 4 * weight * gabor(K_, a_, F_0, omega_0, x, y); // 2.1. Gabor kernel with anisotropic filtering mentionned in paper
             //noise +=  weight * gabor_anisotropic(sigma_x, sigma_y, F_0, omega_0, x, y); // 2.2. Gabor kernel with an anisotropic Gaussian Envolop
         }
     }
