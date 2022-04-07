@@ -1,5 +1,5 @@
 ### Overview
-We implement procedural surface noise without using texture coordinates. The noise is based on sparse convolution and the Gabor kernel with an isotropic filter. It is mainly based on this article: https://www-sop.inria.fr/reves/Basilic/2009/LLDD09/LLDD09PNSGC_paper.pdf
+The implementation of procedural surface noise is without using texture coordinates. The noise is based on sparse convolution and the Gabor kernel with an isotropic filter. It is mainly based on this article: https://www-sop.inria.fr/reves/Basilic/2009/LLDD09/LLDD09PNSGC_paper.pdf
 
 Due to the copyright issue, here is not the entire project. I just put the class and shader concerning the generation of surface noise. So this repository contains:
 
