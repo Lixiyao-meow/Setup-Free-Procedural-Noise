@@ -3,8 +3,8 @@ We implement procedural surface noise without using texture coordinates. The noi
 
 Due to the copyright issue, here is not the entire project. I just put the class and shader concerning the generation of surface noise. So this repository contains:
 
-- Class to generate 3D Poisson Disk: PoissonDisk.cpp
-- Shader to control the noise texture: PBRFragmentShader.glsl
+- Class to generate 3D Poisson Disk: **PoissonDisk.cpp**
+- Shader to control the noise texture: **PBRFragmentShader.glsl**
 
 The visual result is shown below:
 
